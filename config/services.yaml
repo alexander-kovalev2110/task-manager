@@ -1,0 +1,30 @@
+# config/services.yaml
+
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    # 🔥 Основная регистрация
+    App\:
+        resource: '../src/'
+        autowire: true
+        autoconfigure: true
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    # 🔥 Явно регистрируем контроллеры (важно!)
+    App\Infrastructure\Controller\:
+        resource: '../src/Infrastructure/Controller/'
+        tags: ['controller.service_arguments']
+
+    # 🔥 Привязка интерфейсов к реализациям
+    App\Domain\User\UserRepositoryInterface:
+        alias: App\Infrastructure\Repository\DoctrineUserRepository
+
+    App\Domain\Task\TaskRepositoryInterface:
+        alias: App\Infrastructure\Repository\DoctrineTaskRepository
