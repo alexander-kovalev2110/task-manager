@@ -15,8 +15,7 @@ final class ApiExceptionListener
 {
     private const EXCEPTION_TO_STATUS_MAP = [
         \InvalidArgumentException::class => Response::HTTP_BAD_REQUEST,
-        \DomainException::class => Response::HTTP_CONFLICT, // Or HTTP_UNPROCESSABLE_ENTITY (422)
-        // Add other specific domain exceptions here if they don't extend DomainException
+        \DomainException::class => Response::HTTP_CONFLICT, 
     ];
 
     public function __invoke(ExceptionEvent $event): void
@@ -52,7 +51,6 @@ final class ApiExceptionListener
             $message = $exception->getMessage(); // In a real app, format violations here
         }
 
-        // In dev environment, you might want to log or return the actual exception
         // Here we just return the generic message for 500, or specific for 4xx
         if ($statusCode === Response::HTTP_INTERNAL_SERVER_ERROR && $_ENV['APP_ENV'] !== 'dev') {
             $message = 'Internal Server Error';

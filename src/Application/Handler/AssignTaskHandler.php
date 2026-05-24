@@ -1,6 +1,5 @@
 <?php
 
-// src/Handler/AssignTaskHandler.php
 namespace App\Application\Handler;
 
 use App\Domain\User\Email;

@@ -1,5 +1,5 @@
 @url = http://localhost:8000
-@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3NzkyOTMyMjksImV4cCI6MTc3OTI5NjgyOSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSJ9.qIf83ANuYVJXoOKmkLqvdU_pjc0kyjsMoQa9JSbIDKkBys4RUDmP6MTk2MhzqlSfYy3txSPJJ9PZEMWCkY3Gzm13hcik8BM9zJvXX98t76KXGNVQBcqK3wFifHfVitE7jXi5VK156OIQUkamxz5GQ44cMLHQ-Ps8u0Iq_DjD8HNWWZc0x0tg18jIxMh_5xjcPXNtSL38M-NGMNIv53LvTgr5QH1w2DA4YXoIRsLCj2YoPZu6LywMlbTFytr-w4NzkMmNuaJp0Tcmkmamkh0lehiRtCHouOxREpuRgNc_iHxZTmF9PyvQue2CZYS-vcQI3Z_ykegOqU-EVERqQ8w4aN7kgaHhNqqVMH1FjZmrcBpcbIoxB7Q9fn0mIZGsdnC8roy59ZKnE8RiXi4lf0_LA3YWMRv1OVQiIfaGFWTqaICNr7g-dbqQBtRQgDwNq2fSL9wWGBlwLHG1YxUElIjZxkDy9yHRC042eRRgX8bvLz5o7OGn9qOnX-5E7qMgjl4LSc5tRCXvselYB1vXuIiJFFdrPwvYvvbq2rOe4_3ANO08sJpXShr9OmWF92RoM4qZIK7BSJjHmZzxJwnduSOYKkpdnsRa1W9oQVQ-Zac_ooEuAnsLumeusg0L6X7q5xa6gbjvgogpC2YW0pOHYd69S03xac_cjIBIs-f8lpam9xM
+@token = 
 #------------------ User -----------------
 ### Create user
 POST {{url}}/api/register

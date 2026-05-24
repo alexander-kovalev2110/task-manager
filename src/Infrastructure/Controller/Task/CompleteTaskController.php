@@ -1,7 +1,5 @@
 <?php
 
-// src/Controller/Task/CompleteTaskController.php
-
 namespace App\Infrastructure\Controller\Task;
 
 use App\Infrastructure\Bus\CommandBus;

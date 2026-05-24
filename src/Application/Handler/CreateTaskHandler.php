@@ -18,12 +18,9 @@ final class CreateTaskHandler
 
     public function __invoke(CreateTaskCommand $command): void
     {
-        // Создаём задачу 
+        // Create task 
         $task = new Task($command->title);
 
-        // Сохраняем
         $this->taskRepository->save($task);
-
-        // dump($task->getId()); // 👈 смотри тут
     }
 }

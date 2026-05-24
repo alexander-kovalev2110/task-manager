@@ -1,6 +1,5 @@
 <?php
 
-// src/Controller/Task/GetTaskListController.php
 namespace App\Infrastructure\Controller\Task;
 
 use App\Infrastructure\Bus\QueryBus;

@@ -19,7 +19,6 @@ final class GetTaskListHandler
     {
         $qb = $this->em->createQueryBuilder()
             ->select('t', 'u')
-            // ->from('App\Entity\Task', 't')
             ->from(Task::class, 't')
             ->leftJoin('t.assignee', 'u')
             ->setMaxResults($query->limit)
