@@ -118,6 +118,28 @@ FE → Kernel → Security → Controller → QueryBus → QueryHandler → Repo
 
 ---
 
+### 🤖 AI-Powered Subtask Generation (OpenAI Integration)
+
+The application leverages the **OpenAI API** to enhance project management efficiency by automatically breaking down high-level tasks into actionable steps. 
+
+#### Key Technical Implementation Details:
+* **Smart Task Analysis:** Uses the highly efficient `gpt-4o-mini` model to programmatically analyze a task's title and generate exactly 5 concrete, context-aware subtasks.
+* **Defensive Parsing & Validation:** Implements strict backend post-processing. The system automatically detects and strips Markdown code blocks (e.g., ````json ````), cleans whitespace, and validates the raw JSON structure before handling the data.
+* **Type Safety & Reliability:** Utilizes explicit data mapping to enforce strong string types on the array elements, ensuring that the frontend receives a predictable and clean payload.
+* **Graceful Degradation:** If the OpenAI API is unavailable or returns an invalid response, the system catches the failure globally, logs the error, and throws a controlled domain exception without crashing the core application workflow.
+
+#### API Endpoint Example
+* **POST** `/api/task/suggest-subtasks` — Accepts a JSON payload with `taskId` and returns a strictly structured JSON array of strings:
+  ```json
+  [
+    "Install and configure the CI/CD tool (e.g., GitHub Actions)",
+    "Create a configuration file for the build and test pipeline",
+    "Set up automated execution of PHPUnit tests"
+  ]
+  ```
+
+---
+
 ## Exception Handling & Validation
 
 1. **Request Payload Validation:**
