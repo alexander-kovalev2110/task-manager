@@ -118,7 +118,7 @@ FE → Kernel → Security → Controller → QueryBus → QueryHandler → Repo
 
 ---
 
-### 🤖 AI-Powered Subtask Generation (OpenAI Integration)
+### AI-Powered Subtask Generation (OpenAI Integration)
 
 The application leverages the **OpenAI API** to enhance project management efficiency by automatically breaking down high-level tasks into actionable steps. 
 
