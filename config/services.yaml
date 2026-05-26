@@ -28,3 +28,8 @@ services:
 
     App\Domain\Task\TaskRepositoryInterface:
         alias: App\Infrastructure\Repository\DoctrineTaskRepository
+
+    OpenAI\Client:
+        factory: ['OpenAI', 'client']
+        arguments:
+            $apiKey: '%env(OPENAI_API_KEY)%'
