@@ -7,7 +7,7 @@ services:
         autowire: true
         autoconfigure: true
 
-    # 🔥 Основная регистрация
+    # Main registration
     App\:
         resource: '../src/'
         autowire: true
@@ -17,12 +17,12 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-    # 🔥 Явно регистрируем контроллеры (важно!)
+    # Registering controllers explicitly
     App\Infrastructure\Controller\:
         resource: '../src/Infrastructure/Controller/'
         tags: ['controller.service_arguments']
 
-    # 🔥 Привязка интерфейсов к реализациям
+    # Binding interfaces to implementations
     App\Domain\User\UserRepositoryInterface:
         alias: App\Infrastructure\Repository\DoctrineUserRepository
 
@@ -33,3 +33,9 @@ services:
         factory: ['OpenAI', 'client']
         arguments:
             $apiKey: '%env(OPENAI_API_KEY)%'
+
+    monolog.formatter.command:
+        class: Monolog\Formatter\LineFormatter
+        arguments:
+            # $format: "[%%datetime%%] %%level_name%%: %%message%%\n"
+            $format: "%%message%%\n"

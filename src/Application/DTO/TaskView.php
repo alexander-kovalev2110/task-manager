@@ -1,6 +1,5 @@
 <?php
 
-// src/DTO/TaskView.php
 namespace App\Application\DTO;
 
 final class TaskView

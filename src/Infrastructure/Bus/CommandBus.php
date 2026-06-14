@@ -2,16 +2,17 @@
 
 namespace App\Infrastructure\Bus;
 
-use Symfony\Component\Messenger\MessageBusInterface;
-
-final readonly class CommandBus
+final readonly class CommandBus extends AbstractBus
 {
-    public function __construct(
-        private MessageBusInterface $bus
-    ) {}
-
     public function dispatch(object $command): void
     {
+        $start = microtime(true);
+
         $this->bus->dispatch($command);
+
+        $this->log(
+            $command,
+            round((microtime(true) - $start) * 1000, 2)
+        );
     }
 }

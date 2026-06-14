@@ -1,5 +1,5 @@
 @url = http://localhost:8000
-@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3Nzk3Nzk4NTIsImV4cCI6MTc3OTc4MzQ1Miwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidGVzdEB0ZXN0LmNvbSJ9.o99EaUy_6NJm75-DmY9vfzr42jV5GQjWbpXwZ_-JbqEKsv3PYXp69WFyBJtMBu8EspqaYUh8fXk5LOeHZNwigFSJCYzLZPRriPA1x9tLY9KNbV3D6qbWLeoa-rXu6XjBrf_uWuGBXazwZgDeffAcpsZQwkjal6yQhOG7uqfSgOC2Er7hen-L5AqG0x_ZdQr4ab91ZaJtuJtgFlOwhFPRDAxzPChm2hnrjz6pdssX7g3nkk45vrFTbvI4sJFXq5sjcynmC1_yRx2g81sdZSMWrF9tQ1KfhhdajZp0P9wiZ012SV5zgZfnfKuQGLHD6-7cDhjMLkW2TfGbj_DTqNKzEjwbj9xy0UE2pIpicGWUYnDJPkyRuJya76ORqP1WI7yFYq9kIaNBrUs2ERWX88nszr8TTRddZqTBRNWCHxJe8OKLnYneLVdADJ-00BXDn1Ct_Xk9GVYM_FcmW5db3Q2VG6UOV6HTEscc98HcTnBbBTamHqLzTCLOj4vgSViW2kEFp69OYTDMrtaNqb6vbXrl-R6ZOSna8sTPdDJ3U-eEIltBFV6oL0JfCeoWUo_BYjYfQh5LiQA3GpRn4Ul28iqts0Gw_IYQTGzd8fq4T-CdxAUKpUWHOjDFAfuKYX4-i36O3RflJBIbFfA1aUvuBCEaCTWxRr-3wAXriixcJK0pIls
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3ODE0MzYxNjksImV4cCI6MTc4MTQzOTc2OSwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoidGVzdDZAdGVzdC5jb20ifQ.PRIHEhIc76DGTIzjI3p_Kz-5EZH8FVEGc-2X43taLdX9AreXiyw5UklLVMvJ7rCBtZIaXkRo7ERxY6bcKBZxlNo3absVlnZGXSTzwdtnCb1DDt2t8d4kV7X78eB2iUSrfE7zbZvsD-GvNbWPGsE1_Q_6kuah-Py-PQLbBYu2mjhrQQ_c_YNqBpbir0xpjJfoquaVDYebo1_DDo07LVSAj7eL7kqwlpjS21e-nZjxT8RUBzIaAhmGdQXkxG03_e_Kub__DO7_wJB8fMhzJOhcPqt3-mrRU-Il01k6jUCnTvZZ4Z9qja5ainRgNrGJ2F81KWAYQzqBVZFlSDsuHwVG2mhTSFETmGlVcorcZd3TASffs81PaGPi9fIqtUO6Yj5O9xGD2ugUcu1dCy2D6OUp3Gc0DdVDdUVRuwPBinGgsbX3E_Ea3hVdhH7qA0aaQ7kM5gaDX3JVc4FIZbvabXCYBCXjZaZZ8KGz8I4tnYIX4lCZEAN32bJBtz2EKWPaAVXg_50VqGcsdqxEv1aSNZ11t8iijhye_7FXUgU1iRmz3WOwXtgii2QvvRLMNTy5Px_pMoYyHazUbl9cUfpHX_W7feOgaA9YRasbJd3aXLOON_YqwecHiNLI42IXH93tFpYSsThh4xFJwhcTRrGBiseDC-NQEboKruFVIv27S2OPzg0
 #------------------ User -----------------
 ### Create user
 POST {{url}}/api/register
@@ -17,7 +17,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "email": "test@test.com",
+  "email": "test6@test.com",
   "password": "123456"
 }
 
@@ -29,7 +29,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "title": "Create Symfony project with DDD architecture"
+  "title": "Create Symfony project with SQRS architecture"
 }
 
 ### GET Task List
@@ -46,7 +46,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "taskId": 8,
+  "taskId": 11,
   "userEmail": "newtest@test.com"
 }
 
@@ -57,7 +57,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "taskId": 9
+  "taskId": 12
 }
 
 ### Complete Task
@@ -67,7 +67,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "taskId": 8
+  "taskId": 12
 }
 
 ### Suggest Subtasks via OpenAI
@@ -77,5 +77,5 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "taskId": 12
+  "taskId": 13
 }

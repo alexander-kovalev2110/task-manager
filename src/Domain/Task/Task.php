@@ -2,7 +2,7 @@
 
 namespace App\Domain\Task;
 
-use App\Repository\DoctrineTaskRepository;
+use App\Infrastructure\Repository\DoctrineTaskRepository;
 use Doctrine\ORM\Mapping as ORM;
 use App\Domain\Task\TaskStatus;
 use App\Domain\User\User;

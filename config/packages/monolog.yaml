@@ -1,0 +1,13 @@
+monolog:
+    channels:
+        - deprecation
+
+when@dev:
+    monolog:
+        handlers:
+            main:
+                type: stream
+                path: "%kernel.logs_dir%/%kernel.environment%.log"
+                level: error
+                # formatter: monolog.formatter.line
+                formatter: monolog.formatter.command
